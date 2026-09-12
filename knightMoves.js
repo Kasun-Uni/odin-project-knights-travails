@@ -36,10 +36,13 @@ function bfs(start, end) {
 
   return null; // shouldn't happen on a valid 8x8 board
 }
+function knightMoves(start, end) {
+  const path = bfs(start, end);
 
-console.log(bfs([0, 0], [1, 2]));
-console.log(bfs([3, 3], [4, 3]));
+  console.log(`You made it in ${path.length - 1} moves!  Here's your path:`);
+  path.forEach((square) => {
+    console.log(`  [${square[0]},${square[1]}]`);
+  });
+}
 
-console.log(getValidMoves([0, 0]));
-console.log(getValidMoves([3, 3]));
-console.log(getValidMoves([7, 7]));
+knightMoves([3, 3], [4, 3]);
