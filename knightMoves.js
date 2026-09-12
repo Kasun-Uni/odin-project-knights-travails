@@ -45,4 +45,20 @@ function knightMoves(start, end) {
   });
 }
 
+console.log("=== Test 1: [0,0] -> [1,2] (should be 1 move) ===");
+knightMoves([0, 0], [1, 2]);
+
+console.log("\n=== Test 2: [0,0] -> [3,3] (should be 2 moves) ===");
+knightMoves([0, 0], [3, 3]);
+
+console.log("\n=== Test 3: [3,3] -> [0,0] (should be 2 moves) ===");
+knightMoves([3, 3], [0, 0]);
+
+console.log("\n=== Test 4: [0,0] -> [7,7] (should be 6 moves) ===");
+knightMoves([0, 0], [7, 7]);
+
+console.log("\n=== Test 5: [3,3] -> [4,3] (assignment's exact example, should be 3 moves) ===");
 knightMoves([3, 3], [4, 3]);
+
+console.log("\n=== Test 6: same square (should be 0 moves) ===");
+knightMoves([5, 5], [5, 5]);
